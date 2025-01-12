@@ -71,6 +71,7 @@ export default function Index() {
       await MediaLibary.saveToLibraryAsync(localUri);
       if(localUri){
         alert('saved!')
+        onReset();
       }
     } catch(e) {
       console.log(e);

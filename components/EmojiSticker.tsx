@@ -12,7 +12,7 @@ export default function EmojiSticker({imageSize, stickerSource} : Props) {
     const scaleImage = useSharedValue(imageSize);
     const translateX = useSharedValue(0);
     const translateY = useSharedValue(0);
-
+  
     const doubleTap = Gesture.Tap()
         .numberOfTaps(2)
         .onStart(() => {
