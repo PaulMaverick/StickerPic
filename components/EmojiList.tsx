@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FlatList, View, Pressable, StyleSheet, Platform } from "react-native";
+import { FlatList, Pressable, StyleSheet, Platform } from "react-native";
 import { Image, type ImageSource } from "expo-image";
 import { emojiData } from "@/Data/emojiData";
 
@@ -7,6 +7,8 @@ type Props = {
     onSelect: (image: ImageSource) => void;
     onCloseModal: () => void;
 }
+
+
 
 export default function EmojiList({onSelect, onCloseModal}: Props) {
 
@@ -22,7 +24,6 @@ export default function EmojiList({onSelect, onCloseModal}: Props) {
                 <Pressable 
                     onPress={() => {
                         onSelect(item);
-                        onCloseModal();
                     }}>
                     <Image source={item} key={index} style={styles.image} />
                 </Pressable>
